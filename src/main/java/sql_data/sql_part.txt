@@ -1,0 +1,19 @@
+
+-- Create a query to return the unique rows in a table.
+
+SELECT DISTINCT NAME FROM STUDENT;
+
+
+-- Write a command to insert values into a table.
+
+INSERT INTO STUDENT (NAME, MARK, SIGNATURE_ID)
+VALUES ('Dani', 9, 1);
+
+
+-- Create a query that joins two tables together. Note, all rows from the first table must be in the result-set.
+
+SELECT student.NAME, student.MARK, signature.SIGNATURE
+FROM STUDENT student
+LEFT JOIN SIGNATURE signature
+ON student.SIGNATURE_ID = signature.ID
+ORDER BY student.MARK ASC;
